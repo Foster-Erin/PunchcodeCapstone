@@ -10,7 +10,10 @@ const ACTIONS = {
 };
 
 //create proxy server to get around CORS issue, then paste api URL//
-const BASE_URL = 'http://api.adzuna.com/v1/api/jobs/gb/search/1?app_id={b082a4d4}&app_key={59640a0e8433d682fbf4e629ad57517a }&results_per_page=20&what=javascript%20developer&content-type=application/json';
+const api_id = 'b082a4d4'
+const api_key = '59640a0e8433d682fbf4e629ad57517a'
+const BASE_URL = 'http://api.adzuna.com/v1/api/jobs/gb/search/1?app_id=b082a4d4&app_key=59640a0e8433d682fbf4e629ad57517a&results_per_page=20&what=javascript%20developer&content-type=application/json';
+const url = 'https://api.adzuna.com/v1/api/jobs/gb/search/1?app_id=b082a4d4&app_key=59640a0e8433d682fbf4e629ad57517a'
 
 function reducer(state, action) {
   switch (action.type) {
@@ -42,15 +45,21 @@ export default function useFetchJobs(params, page) {
   useEffect(()=> {
     const cancelToken1 = axios.CancelToken.source()
       dispatch({type: ACTIONS.MAKE_REQUEST})
-      axios.get(BASE_URL, {
-        cancelToken: cancelToken1.token,
-        params: {markdown: true, page: page, ...params}
+      axios.get(url, {
+        // cancelToken: cancelToken1.token,
+        // params: {markdown: true, page: page, ...params}
       }).then(res => {
-        dispatch({ type: ACTIONS.GET_DATA, payload: {jobs: res.data} }) 
+        console.log(res.data)
+        // dispatch({ type: ACTIONS.GET_DATA, payload: {jobs: res.data} }) 
       }).catch(e => {
+        console.log(e)
         if (axios.isCancel(e)) return
-        dispatch({type: ACTIONS.ERROR, payload: { error: e} })
+  
+        // dispatch({type: ACTIONS.ERROR, payload: { error: e} })
       })
+      // fetch(url)
+      // .then(res => res.json())
+      // .then(console.log)
 
 
       // axios.get(BASE_URL, {
@@ -73,3 +82,5 @@ export default function useFetchJobs(params, page) {
 
   return state
 }
+
+
