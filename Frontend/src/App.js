@@ -8,7 +8,7 @@ import SearchForm from './SearchForm';
 function App() {
   const [params, setParams] = useState({});
   const [page, setPage] = useState(1);
-  const { jobs, loading, error, hasNextPage } = useFetchJobs(params, page);
+  const { jobs, loading, error, totalPages } = useFetchJobs(params, page);
 
   function handleParamChange(e) {
     const param = e.target.name;
@@ -24,7 +24,7 @@ function App() {
     <Container className='mb-4'>
       <h1 className='mb-4'>JR. DEV JOB SEARCH</h1>
       <SearchForm params={params} onParamChange={handleParamChange} />
-      <JobsPagination totalPages={7} page={page} setPage={setPage} />
+      <JobsPagination totalPages={totalPages} page={page} setPage={setPage} />
       {loading && <h1>Loading...</h1>}
       {error && <h1>Error. Try Refreshing.</h1>}
       {jobs?.map((job) => (

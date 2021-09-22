@@ -3,11 +3,13 @@ import axios from 'axios';
 import { reducer, ACTIONS } from './reducer';
 import testData from './testData';
 
-const api_id = 'b082a4d4';
-const api_key = '59640a0e8433d682fbf4e629ad57517a';
-const url =
-  'https://api.adzuna.com/v1/api/jobs/us/search/1?app_id=b082a4d4&app_key=59640a0e8433d682fbf4e629ad57517a';
+const app_id = 'b082a4d4';
+const app_key = '59640a0e8433d682fbf4e629ad57517a';
+const base_url = 'https://api.adzuna.com/v1/api';
 
+function getUrl({ results_per_page = 10, page = 1 }) {
+  return `${base_url}/jobs/us/search/${page}?app_id=${app_id}&app_key=${app_key}&results_per_page=${results_per_page}`;
+}
 export default function useFetchJobs(params, page) {
   const [state, dispatch] = useReducer(reducer, {
     jobs: [],
@@ -17,26 +19,37 @@ export default function useFetchJobs(params, page) {
   });
   const [loading, setLoading] = useState(false);
   const [jobs, setJobs] = useState([]);
+  const [totalPages, setTotalPages] = useState(1);
 
   useEffect(() => {
     const cancelToken1 = axios.CancelToken.source();
-    // axios
-    //   .get(url)
-    //   .then((res) => {
-    //     // console.log(res.data);
-    //     setLoading(false);
-    //     console.log(res);
-    //     setJobs(res?.data?.results);
-    //     // dispatch({ type: ACTIONS.GET_DATA, payload: { jobs: res.data } });
-    //   })
-    //   .catch((e) => {
-    //     console.log(e);
-    //     if (axios.isCancel(e)) return;
-    //   });
+    axios
+      .get(getUrl({ page }))
+      .then((res) => {
+        // console.log(res.data);
+        setLoading(false);
+        console.log(res);
+        setJobs(res?.data?.results);
+        setTotalPages(
+          Math.ceil(
+            testData?.data?.count / Math.max(testData?.data?.results?.length, 1)
+          )
+        );
+      })
+      .catch((e) => {
+        console.log(e);
+        if (axios.isCancel(e)) return;
+      });
 
     // NOTE: hack to avoid rate limiting on the api
-    setLoading(false);
-    setJobs(testData?.data?.results);
+    // setLoading(false);
+    // setJobs(testData?.data?.results);
+
+    // setTotalPages(
+    //   Math.ceil(
+    //     testData?.data?.count / Math.max(testData?.data?.results?.length, 1)
+    //   )
+    // );
 
     return () => {
       cancelToken1.cancel();
@@ -44,5 +57,5 @@ export default function useFetchJobs(params, page) {
   }, [params, page]);
 
   // return state;
-  return { loading, jobs };
+  return { loading, jobs, totalPages };
 }
