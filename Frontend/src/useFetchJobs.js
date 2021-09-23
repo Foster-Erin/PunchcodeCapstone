@@ -32,7 +32,7 @@ export default function useFetchJobs(params, page) {
         setJobs(res?.data?.results);
         setTotalPages(
           Math.ceil(
-            testData?.data?.count / Math.max(testData?.data?.results?.length, 1)
+            res?.data?.count / Math.max(res?.data?.results?.length, 1)
           )
         );
       })
