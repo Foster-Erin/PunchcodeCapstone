@@ -45,6 +45,7 @@ export default function JobsPagination({ page, setPage, totalPages }) {
             page={p}
             active={p === page}
             clickHandler={clickHandler}
+            key={p}
           />
         ))}
 
