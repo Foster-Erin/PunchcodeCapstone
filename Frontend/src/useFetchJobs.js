@@ -8,6 +8,7 @@ const app_key = '59640a0e8433d682fbf4e629ad57517a';
 const base_url = 'https://api.adzuna.com/v1/api';
 
 function getUrl({ results_per_page = 10, page = 1 }) {
+  return 'https://api.adzuna.com/v1/api/jobs/us/search/1?app_id=b082a4d4&app_key=59640a0e8433d682fbf4e629ad57517a&results_per_page=30&what=entry%20level%20developer&what_exclude=senior%20sr.%20mid%20IT';
   return `${base_url}/jobs/us/search/${page}?app_id=${app_id}&app_key=${app_key}&results_per_page=${results_per_page}`;
 }
 export default function useFetchJobs(params, page) {
@@ -28,7 +29,7 @@ export default function useFetchJobs(params, page) {
       .then((res) => {
         // console.log(res.data);
         setLoading(false);
-        console.log(res);
+        // console.log(res);
         setJobs(res?.data?.results);
         setTotalPages(
           Math.ceil(

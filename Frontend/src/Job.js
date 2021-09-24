@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 
 export default function Job({ job }) {
   const [open, setOpen] = useState(false);
-  console.log({ job });
+  
   return (
     //import npm i react markdown to convert markdown to react code if necessary (after badges)//
     <Card className='mb-3'>
