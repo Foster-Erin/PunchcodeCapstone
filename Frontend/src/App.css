@@ -2,18 +2,16 @@
   margin: 0;
   box-sizing: border-box;
   /* background-color: rgb(28, 27, 27); */
-
 }
 
 .Container {
   display: flex;
   flex-flow: row wrap;
-  text-align: center ;
+  text-align: center;
   background-color: rgb(255, 255, 255);
-
 }
 
-.Container>* {
+.Container > * {
   padding: 10px;
   margin: 10px;
   flex: 1 100%;

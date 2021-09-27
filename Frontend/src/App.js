@@ -1,10 +1,9 @@
-import useFetchJobs from "./useFetchJobs";
-import React, { useState } from "react";
-import { Container } from "react-bootstrap";
-import Job from "./Job";
-import JobsPagination from "./JobsPagination";
-import SearchForm from "./SearchForm";
-// import axios from "axios";
+import useFetchJobs from './useFetchJobs';
+import React, { useState } from 'react';
+import { Container } from 'react-bootstrap';
+import Job from './Job';
+import JobsPagination from './JobsPagination';
+import SearchForm from './SearchForm';
 
 function App() {
   const [params, setParams] = useState({});
@@ -13,8 +12,8 @@ function App() {
     params,
     page
   );
-  const [searchValue, setSearchValue] = useState("");
-  const [cleanSearchVal, setCleanSearchVal] = useState("");
+  const [searchValue, setSearchValue] = useState('');
+  const [cleanSearchVal, setCleanSearchVal] = useState('');
   // const [foundJobs, setFoundJobs] = useState([]);
   function handleParamChange(e) {
     const param = e.target.name;
@@ -31,41 +30,29 @@ function App() {
 
   function handleChange(e) {
     setSearchValue(e.target.value);
-    const clean = searchValue.replace(/\s/g, "%");
+    const clean = searchValue.replace(/\s/g, '%');
     setCleanSearchVal(clean);
   }
   return (
-    <Container className="Container mb-4">
+    <Container className='Container mb-4'>
       <header>
-        <nav id="navBar">Nav Bar</nav>
-        <h1 className=" headerTitle mb-4">JR. DEV JOB SEARCH</h1>
+        <nav id='navBar'>Nav Bar</nav>
+        <h1 className=' headerTitle mb-4'>JR. DEV JOB SEARCH</h1>
       </header>
       <SearchForm params={params} onParamChange={handleParamChange} />
       <form onSubmit={handleSearch}>
         <input
           onChange={handleChange}
           value={searchValue}
-          name="description"
-          type="text"
-          id="jobSearchBar"
+          name='description'
+          type='text'
+          id='jobSearchBar'
         />
         <div>
-          <button type="button" onClick={handleSearch}>
+          <button type='button' onClick={handleSearch}>
             SEARCH
           </button>
         </div>
-        <div>
-        <input
-          onChange={handleChange}
-          value={searchValue}
-          name="description"
-          type="text"
-          id="locationBar"
-        />
-          <button type="button" onClick={handleSearch}>
-            LOCATION
-          </button>
-          </div>
       </form>
 
       <JobsPagination totalPages={totalPages} page={page} setPage={setPage} />
