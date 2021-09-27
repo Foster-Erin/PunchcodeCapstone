@@ -14,7 +14,7 @@ function getUrl({ searchTerms, results_per_page = 10, page = 1 }) {
   }
   return url;
 }
-const pastApiRateLimit = true;
+const pastApiRateLimit = false;
 
 export default function useFetchJobs(params, page) {
   const [loading, setLoading] = useState(false);
@@ -78,14 +78,14 @@ export default function useFetchJobs(params, page) {
         });
     } else {
       // NOTE: hack to avoid rate limiting on the api
-      // setLoading(false);
-      // setJobs(testData?.data?.results);
+      setLoading(false);
+      setJobs(testData?.data?.results);
 
-      // setTotalPages(
-      //   Math.ceil(
-      //     testData?.data?.count / Math.max(testData?.data?.results?.length, 1)
-      //   )
-      // );
+      setTotalPages(
+        Math.ceil(
+          testData?.data?.count / Math.max(testData?.data?.results?.length, 1)
+        )
+      );
     }
 
     return () => {

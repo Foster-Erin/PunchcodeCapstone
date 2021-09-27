@@ -4,7 +4,7 @@ import { Container } from "react-bootstrap";
 import Job from "./Job";
 import JobsPagination from "./JobsPagination";
 import SearchForm from "./SearchForm";
-import axios from "axios";
+// import axios from "axios";
 
 function App() {
   const [params, setParams] = useState({});
@@ -15,7 +15,7 @@ function App() {
   );
   const [searchValue, setSearchValue] = useState("");
   const [cleanSearchVal, setCleanSearchVal] = useState("");
-  const [foundJobs, setFoundJobs] = useState([]);
+  // const [foundJobs, setFoundJobs] = useState([]);
   function handleParamChange(e) {
     const param = e.target.name;
     const value = e.target.value;
@@ -37,7 +37,8 @@ function App() {
   return (
     <Container className="Container mb-4">
       <header>
-        <h1 className="mb-4">JR. DEV JOB SEARCH</h1>
+        <nav id="navBar">Nav Bar</nav>
+        <h1 className=" headerTitle mb-4">JR. DEV JOB SEARCH</h1>
       </header>
       <SearchForm params={params} onParamChange={handleParamChange} />
       <form onSubmit={handleSearch}>
@@ -46,13 +47,25 @@ function App() {
           value={searchValue}
           name="description"
           type="text"
-          id="searchBar"
+          id="jobSearchBar"
         />
         <div>
           <button type="button" onClick={handleSearch}>
             SEARCH
           </button>
         </div>
+        <div>
+        <input
+          onChange={handleChange}
+          value={searchValue}
+          name="description"
+          type="text"
+          id="locationBar"
+        />
+          <button type="button" onClick={handleSearch}>
+            LOCATION
+          </button>
+          </div>
       </form>
 
       <JobsPagination totalPages={totalPages} page={page} setPage={setPage} />
