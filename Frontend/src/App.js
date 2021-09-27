@@ -9,7 +9,10 @@ import axios from "axios";
 function App() {
   const [params, setParams] = useState({});
   const [page, setPage] = useState(1);
-  const { jobs, loading, error, totalPages, searchJobs } = useFetchJobs(params, page);
+  const { jobs, loading, error, totalPages, searchJobs } = useFetchJobs(
+    params,
+    page
+  );
   const [searchValue, setSearchValue] = useState("");
   const [cleanSearchVal, setCleanSearchVal] = useState("");
   const [foundJobs, setFoundJobs] = useState([]);
@@ -23,31 +26,35 @@ function App() {
   }
   function handleSearch(e) {
     e.preventDefault();
-    searchJobs(cleanSearchVal)
+    searchJobs(cleanSearchVal);
   }
 
   function handleChange(e) {
-    
     setSearchValue(e.target.value);
-    const clean = searchValue.replace(/\s/g, '%')
-    setCleanSearchVal(clean)
+    const clean = searchValue.replace(/\s/g, "%");
+    setCleanSearchVal(clean);
   }
   return (
-    <Container className="mb-4">
-      <h1 className="mb-4">JR. DEV JOB SEARCH</h1>
+    <Container className="Container mb-4">
+      <header>
+        <h1 className="mb-4">JR. DEV JOB SEARCH</h1>
+      </header>
       <SearchForm params={params} onParamChange={handleParamChange} />
       <form onSubmit={handleSearch}>
-          <input
+        <input
           onChange={handleChange}
           value={searchValue}
           name="description"
           type="text"
           id="searchBar"
-         />
-        <button type="button" onClick={handleSearch}>
-          SEARCH
-        </button>
+        />
+        <div>
+          <button type="button" onClick={handleSearch}>
+            SEARCH
+          </button>
+        </div>
       </form>
+
       <JobsPagination totalPages={totalPages} page={page} setPage={setPage} />
       {loading && <h1>Loading...</h1>}
       {error && <h1>Error. Try Refreshing.</h1>}

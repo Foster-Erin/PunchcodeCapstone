@@ -7,7 +7,8 @@ export default function Job({ job }) {
   
   return (
     //import npm i react markdown to convert markdown to react code if necessary (after badges)//
-    <Card className='mb-3'>
+    <main> 
+      <Card className='mb-3'>
       <Card.Body>
         <div className='d-flex justify-content-between'>
           <div>
@@ -44,5 +45,6 @@ export default function Job({ job }) {
         </Collapse>
       </Card.Body>
     </Card>
+    </main>
   );
 }
