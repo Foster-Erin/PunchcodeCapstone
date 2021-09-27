@@ -35,7 +35,9 @@ export default function Job({ job }) {
           >
             {open ? 'Hide Details' : 'View Details'}
           </Button>
+          <a  href={job.redirect_url} target="_blank" rel="noreferrer">
           <Button>APPLY NOW</Button>
+          </a>
         </Card.Text>
         <Collapse in={open}>
           <div className='mt-4'>
