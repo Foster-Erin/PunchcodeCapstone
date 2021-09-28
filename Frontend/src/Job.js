@@ -20,11 +20,14 @@ export default function Job({ job }) {
               <Card.Subtitle className='text-muted mb-2'>
                 {job.salary_min}
               </Card.Subtitle>
-              <Badge variant='secondary' className='mr-2'>
+              <Badge variant='secondary' className='mr-2 test'>
                 {' '}
                 {job.category.label}{' '}
               </Badge>
-              <Badge variant='secondary'> {job.location.area} </Badge>
+              <Badge variant='secondary' className='butt-test'>
+                {' '}
+                {job.location.area}{' '}
+              </Badge>
               <div style={{ wordBreak: 'break-all' }}>
                 {job.id.redirect_url}
               </div>
@@ -34,6 +37,7 @@ export default function Job({ job }) {
             <Button
               onClick={() => setOpen((prevOpen) => !prevOpen)}
               variant='primary'
+              className='test'
             >
               {open ? 'Hide Details' : 'View Details'}
             </Button>

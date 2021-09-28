@@ -46,6 +46,7 @@ ul{
   flex-wrap: wrap;
 }
 
+<<<<<<< Updated upstream
 .align-items-center{
   align-items: center;
 }
@@ -76,6 +77,14 @@ ul{
   font-size: 30px;
   color: black;
   text-transform: uppercase;
+=======
+.test {
+  margin-right: 5px;
+}
+
+.butt-test {
+  margin-bottom: 5px;
+>>>>>>> Stashed changes
 }
 /* #navBar */
 
