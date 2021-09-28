@@ -8,9 +8,9 @@
   /* background-color: rgb(28, 27, 27); */
 }
 
-.card-container{
+/* .card-container{
   display: flex;
-}
+} */
 
 #cardTitle{
 color: rgb(0, 0, 0);
@@ -20,25 +20,25 @@ color: rgb(0, 0, 0);
 
 }
 
-.badge{
+/* .badge{
   padding: 5px;
   
-}
+} */
 
 
-.Container {
+/* .Container {
   display: flex;
   flex-flow: row wrap;
   text-align: center;
   background-color: rgb(255, 255, 255);
-}
+} */
 
-.Container > * {
+/* .Container > * {
   padding: 10px;
   margin: 10px;
   flex: 1 100%;
   border-radius: 10px;
-}
+} */
 
 header {
   background: rgb(13, 171, 171);

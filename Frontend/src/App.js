@@ -59,7 +59,7 @@ function App() {
         </nav>
         </div>
         </div>
-        <h1 className=" headerTitle mb-4">JR. DEV JOB SEARCH</h1>
+        <h1 className=" headerTitle mb-4"></h1>
       </header>
       <SearchForm params={params} onParamChange={handleParamChange} />
       <form onSubmit={handleSearch}>
