@@ -34,10 +34,26 @@ function App() {
     setCleanSearchVal(clean);
   }
   return (
-    <Container className='Container mb-4'>
-      <header>
-        <nav id='navBar'>Nav Bar</nav>
-        <h1 className=' headerTitle mb-4'>JR. DEV JOB SEARCH</h1>
+    <Container className="Container mb-4">
+      <header className="header">
+        <div id="navContainer">
+          <div class="navRow align-items-center justify-content-between">
+            <div class="logo">
+              <a href="#">LOGO</a>
+            </div>
+
+        <nav className="nav">
+        <ul>
+          <li><a href="#"></a></li>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">SIGN UP</a></li>
+          <li><a href="#">LOGIN</a></li>
+          
+        </ul>
+        </nav>
+        </div>
+        </div>
+        <h1 className=" headerTitle mb-4">JR. DEV JOB SEARCH</h1>
       </header>
       <SearchForm params={params} onParamChange={handleParamChange} />
       <form onSubmit={handleSearch}>
@@ -53,6 +69,18 @@ function App() {
             SEARCH
           </button>
         </div>
+        {/* <div>
+        <input
+          onChange={handleChange}
+          value={searchValue}
+          name="description"
+          type="text"
+          id="locationBar"
+        />
+          <button type="button" onClick={handleSearch}>
+            LOCATION
+          </button>
+          </div> */}
       </form>
 
       <JobsPagination totalPages={totalPages} page={page} setPage={setPage} />

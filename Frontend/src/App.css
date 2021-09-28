@@ -1,3 +1,7 @@
+:root{
+  --color-1: #fcf7e7;
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -21,8 +25,58 @@
 header {
   background: rgb(13, 171, 171);
   height: 120px;
+  padding: 12px;
 }
 
+.header{
+  background-color: var(--color-1);
+  border: solid rgb(201, 199, 199) .5px;
+}
+
+a{
+  text-decoration: none;
+}
+
+ul{
+  list-style: none;
+}
+
+.navRow {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.align-items-center{
+  align-items: center;
+}
+
+.justify-content-center{
+  justify-content: space-between;
+}
+
+.header .nav ul li{
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.header .nav ul li{
+  display: inline-block;
+  font-size:16px;
+  padding: 10px 0;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+}
+
+.header .nav,
+.header .logo{
+  padding: 0 15px;
+}
+
+.header .logo a{
+  font-size: 30px;
+  color: black;
+  text-transform: uppercase;
+}
 /* #navBar */
 
 /* main {
