@@ -1,5 +1,5 @@
 :root{
-  --color-1: #fcf7e7;
+  --color-1: #ff507f;
 }
 
 * {
@@ -31,10 +31,12 @@ header {
 .header{
   background-color: var(--color-1);
   border: solid rgb(201, 199, 199) .5px;
+  padding: 12px;
 }
 
 a{
   text-decoration: none;
+  color: black;
 }
 
 ul{
@@ -46,7 +48,6 @@ ul{
   flex-wrap: wrap;
 }
 
-<<<<<<< Updated upstream
 .align-items-center{
   align-items: center;
 }
@@ -77,14 +78,11 @@ ul{
   font-size: 30px;
   color: black;
   text-transform: uppercase;
-=======
-.test {
-  margin-right: 5px;
 }
 
-.butt-test {
-  margin-bottom: 5px;
->>>>>>> Stashed changes
+.header .nav ul li a:hover,
+.header .nav ul li a.active{
+  color: white;
 }
 /* #navBar */
 
