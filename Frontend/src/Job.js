@@ -1,25 +1,24 @@
 import React, { useState } from 'react';
 // import { Card, Badge, Button } from 'react-bootstrap';
-import './JobCard.css';
+import './Job.css';
 
 export default function Job({ job }) {
   // const [open, setOpen] = useState(false);
 
   return (
     //import npm i react markdown to convert markdown to react code if necessary (after badges)//
-    <main>
-      <div className="jobCardWrapper">
-      <section className='card-container grid mb-3'>
-        <div id="cardBody">
+      // <div className="jobCardWrapper">
+      // <section className='card-container grid'>
+        <div className="cardBody grid">
           <div className='align-items-center'>
             <div>
               <div id="cardTitle">
                 {job.title} -{' '}
-                <span className='text-muted font-weight-light'>
+                <span className='font-weight-bold'>
                   {job.company.display_name}
                 </span>
               </div>
-              <div id="cardSubtitle" className='text-muted mb-2'>
+              <div className='cardSubtitle'>
                 {job.salary_min}
               </div>
               <div variant='secondary' className='badge'>
@@ -42,17 +41,14 @@ export default function Job({ job }) {
             </div>
           </div>
   
-        <div className="descriptionBox">
         
-            <div id="jobDescription">{job.description}</div>
-            <a href={job.redirect_url} target='_blank' rel='noreferrer'>
+            <div id="jobDescription" className="hide">{job.description}</div>
+            <a href={job.redirect_url} target='_blank' rel='noreferrer' className='apply'>
               <button id="applyButton">APPLY NOW</button>
             </a>
-          </div>
           
         </div>
-      </section>
-      </div>
-    </main>
+      // </section>
+      // </div>
   );
 }

@@ -1,14 +1,14 @@
 .jobCardWrapper{
     display: grid;
     width: 800px;
-    
+    border: solid 2px red;
 }
 
 .grid{
-    margin: 80px;
+    display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 2fr 4fr;
-    grid-gap: 30px;
+    /* grid-gap: 30px; */
     align-items: center;
     grid-template-areas:
     "a b"
@@ -17,16 +17,21 @@
 
 #cardTitle {
     text-transform: uppercase;
+    font-weight: bold;
     grid-area: b;
 }
 
 
-#cardBody{
+.cardBody{
     border: rgb(0, 0, 0) solid 4px;
     border-radius:20px;
     padding:30px;
+    /* height: 25rem; */
+
+    /* width:50% */
+
 }
-#cardBody:hover{
+.cardBody:hover{
     transform: translateY(5px);
     box-shadow: 2px 2px 26px 0px rgba(0,0,0,0.3);
 }
@@ -39,23 +44,41 @@
     box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
     border-radius: 15px;
     padding: 20px;
-    width: 250px;
+    /* width: 250px; */
+    overflow: hidden;
+    /* text-overflow: ellipsis; */
     transition: transform .3s;
+    word-wrap: break-word;
     grid-area: c;
 }
 
-
-.descriptionBox{
-    padding: 30px;
+.cardSubtitle{
+    grid-area: a;
 }
+
 
 #applyButton{
     background-color: black;
     color: white;
     border-radius: 10px;
-    grid-area: b;
 }
 
 .badge{
     background-color: black;
+}
+
+.apply{
+    display: block;
+    grid-area: b;
+  
+
+}
+
+.show{
+
+}
+
+.hide{
+    height: 145px;
+
 }

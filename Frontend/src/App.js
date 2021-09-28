@@ -1,9 +1,9 @@
-import useFetchJobs from './useFetchJobs';
-import React, { useState } from 'react';
-import { Container } from 'react-bootstrap';
-import Job from './Job';
-import JobsPagination from './JobsPagination';
-import SearchForm from './SearchForm';
+import useFetchJobs from "./useFetchJobs";
+import React, { useState } from "react";
+import Job from "./Job";
+import JobsPagination from "./JobsPagination";
+import SearchForm from "./SearchForm";
+import "./App.css";
 
 function App() {
   const [params, setParams] = useState({});
@@ -12,8 +12,8 @@ function App() {
     params,
     page
   );
-  const [searchValue, setSearchValue] = useState('');
-  const [cleanSearchVal, setCleanSearchVal] = useState('');
+  const [searchValue, setSearchValue] = useState("");
+  const [cleanSearchVal, setCleanSearchVal] = useState("");
   // const [foundJobs, setFoundJobs] = useState([]);
   function handleParamChange(e) {
     const param = e.target.name;
@@ -30,75 +30,76 @@ function App() {
 
   function handleChange(e) {
     setSearchValue(e.target.value);
-    const clean = searchValue.replace(/\s/g, '%');
+    const clean = searchValue.replace(/\s/g, "%");
     setCleanSearchVal(clean);
   }
   return (
-    <Container className="Container mb-4">
+    <main className="Container mb-4 bg-image">
+      {/* <div className="bg-image"> */}
       <header className="header">
-        <div id="navContainer">
           <div class="navRow align-items-center justify-content-between">
             <div class="logo">
               <a href="#">LOGO</a>
             </div>
-            <input type="checkbox" id="navCheck"/>
+        <div id="navContainer">
+            <nav className="nav">
+              <ul>
+                <li>
+                  <a href="#"></a>
+                </li>
+                <li>
+                  <a href="#">HOME</a>
+                </li>
+                <li>
+                  <a href="#">SIGN UP</a>
+                </li>
+                <li>
+                  <a href="#">LOGIN</a>
+                </li>
+              </ul>
+            <input type="checkbox" id="navCheck" />
             <label for="navCheck" className="navToggle">
               <span></span>
-
             </label>
+            </nav>
 
-
-        <nav className="nav">
-        <ul>
-          <li><a href="#"></a></li>
-          <li><a href="#">HOME</a></li>
-          <li><a href="#">SIGN UP</a></li>
-          <li><a href="#">LOGIN</a></li>
-          
-        </ul>
-        </nav>
+          </div>
         </div>
-        </div>
-        <h1 className=" headerTitle mb-4"></h1>
+        {/* <h1 className=" headerTitle mb-4"></h1> */}
       </header>
       <SearchForm params={params} onParamChange={handleParamChange} />
       <form onSubmit={handleSearch}>
         <input
           onChange={handleChange}
           value={searchValue}
-          name='description'
-          type='text'
-          id='jobSearchBar'
+          name="description"
+          type="text"
+          id="jobSearchBar"
         />
         <div>
-          <button type='button' onClick={handleSearch}>
+          <button id="searchButton" type="button" onClick={handleSearch}>
             SEARCH
           </button>
         </div>
-        {/* <div>
-        <input
-          onChange={handleChange}
-          value={searchValue}
-          name="description"
-          type="text"
-          id="locationBar"
-        />
-          <button type="button" onClick={handleSearch}>
-            LOCATION
-          </button>
-          </div> */}
+       
       </form>
 
       <JobsPagination totalPages={totalPages} page={page} setPage={setPage} />
       {loading && <h1>Loading...</h1>}
       {error && <h1>Error. Try Refreshing.</h1>}
+      <section className='jobs-container'>
       {jobs?.map((job) => {
         // console.log(job)
         return <Job key={job.id} job={job} />;
       })}
-
+</section>
       <JobsPagination totalPages={totalPages} page={page} setPage={setPage} />
-    </Container>
+      {/* </div> */}
+      
+      <footer>
+        Footer
+      </footer>
+    </main>
   );
 }
 
