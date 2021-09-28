@@ -41,6 +41,12 @@ function App() {
             <div class="logo">
               <a href="#">LOGO</a>
             </div>
+            <input type="checkbox" id="navCheck"/>
+            <label for="navCheck" className="navToggle">
+              <span></span>
+
+            </label>
+
 
         <nav className="nav">
         <ul>
