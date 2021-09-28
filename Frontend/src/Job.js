@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Card, Badge, Button, Collapse } from 'react-bootstrap';
+import { Card, Badge, Button } from 'react-bootstrap';
+import './JobCard.css';
 
 export default function Job({ job }) {
   const [open, setOpen] = useState(false);
@@ -7,24 +8,25 @@ export default function Job({ job }) {
   return (
     //import npm i react markdown to convert markdown to react code if necessary (after badges)//
     <main>
-      <Card className='mb-3'>
-        <Card.Body>
+      <div className="jobCardWrapper">
+      <Card className='card-container grid mb-3'>
+        <Card.Body id="cardBody">
           <div className='d-flex justify-content-between'>
             <div>
-              <Card.Title>
+              <Card.Title id="cardTitle">
                 {job.title} -{' '}
                 <span className='text-muted font-weight-light'>
                   {job.company.display_name}
                 </span>
               </Card.Title>
-              <Card.Subtitle className='text-muted mb-2'>
+              <Card.Subtitle id="cardSubtitle" className='text-muted mb-2'>
                 {job.salary_min}
               </Card.Subtitle>
-              <Badge variant='secondary' className='mr-2 test'>
+              <Badge variant='secondary' className='badge'>
                 {' '}
                 {job.category.label}{' '}
               </Badge>
-              <Badge variant='secondary' className='butt-test'>
+              <Badge variant='secondary' className='badge'>
                 {' '}
                 {job.location.area}{' '}
               </Badge>
@@ -33,26 +35,30 @@ export default function Job({ job }) {
               </div>
             </div>
           </div>
-          <Card.Text>
-            <Button
+  
+        <Card.Text>
+        
+            {/* <Button
               onClick={() => setOpen((prevOpen) => !prevOpen)}
               variant='primary'
               className='test'
             >
               {open ? 'Hide Details' : 'View Details'}
-            </Button>
+            </Button> */}
+            <div id="jobDescription">{job.description}</div>
             <a href={job.redirect_url} target='_blank' rel='noreferrer'>
               <Button>APPLY NOW</Button>
             </a>
           </Card.Text>
-          <Collapse in={open}>
-            <div className='mt-4'>
+          {/* <Collapse in={open}> */}
+            {/* <div className='mt-4'> */}
               {/* <ReactMarkdown source={job.description} /> */}
-              {job.description}
-            </div>
-          </Collapse>
+              {/* {job.description} */}
+            {/* </div> */}
+          {/* </Collapse> */}
         </Card.Body>
       </Card>
+      </div>
     </main>
   );
 }

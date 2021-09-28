@@ -8,6 +8,24 @@
   /* background-color: rgb(28, 27, 27); */
 }
 
+.card-container{
+  display: flex;
+}
+
+#cardTitle{
+color: rgb(0, 0, 0);
+}
+
+#cardSubtitle{
+
+}
+
+.badge{
+  padding: 5px;
+  
+}
+
+
 .Container {
   display: flex;
   flex-flow: row wrap;
