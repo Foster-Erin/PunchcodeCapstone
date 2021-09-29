@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
 import testData from './testData';
 
@@ -22,6 +22,9 @@ export default function useFetchJobs(params, page) {
   const [totalPages, setTotalPages] = useState(1);
 
   function searchJobs(searchTerms) {
+    if (searchTerms === '') return;
+    console.log('searching', searchTerms);
+    // return;
     setLoading(true);
     if (!pastApiRateLimit) {
       axios
@@ -55,6 +58,10 @@ export default function useFetchJobs(params, page) {
       );
     }
   }
+  const memoizedSearchJobs = useCallback(
+    (searchTerms) => searchJobs(searchTerms),
+    []
+  );
   useEffect(() => {
     const cancelToken1 = axios.CancelToken.source();
     if (!pastApiRateLimit) {
@@ -94,5 +101,5 @@ export default function useFetchJobs(params, page) {
   }, [params, page]);
 
   // return state;
-  return { loading, jobs, totalPages, searchJobs };
+  return { loading, jobs, totalPages, searchJobs: memoizedSearchJobs };
 }
