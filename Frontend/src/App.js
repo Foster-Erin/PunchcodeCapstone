@@ -56,22 +56,22 @@ function App() {
             SEARCH
           </button>
         </div>
-        <div className='optionsForm'>
-          {[
-            { label: 'Frontend', staticSearchTerm: 'frontend' },
-            { label: 'Backend', staticSearchTerm: 'backend' },
-            { label: 'UI/UX', staticSearchTerm: 'UI | UX' },
-          ].map((filterCheckbox) => (
-            <FilterCheckbox
-              key={filterCheckbox.label}
-              setSearchInput={setSearchInput}
-              setSearchValue={setSearchValue}
-              label={filterCheckbox.label}
-              staticSearchTerm={filterCheckbox.staticSearchTerm}
-            />
-          ))}
-        </div>
       </form>
+      <div className='optionsForm'>
+        {[
+          { label: 'Frontend', staticSearchTerm: 'frontend' },
+          { label: 'Backend', staticSearchTerm: 'backend' },
+          { label: 'UI/UX', staticSearchTerm: 'UI | UX' },
+        ].map((filterCheckbox) => (
+          <FilterCheckbox
+            key={filterCheckbox.label}
+            setSearchInput={setSearchInput}
+            setSearchValue={setSearchValue}
+            label={filterCheckbox.label}
+            staticSearchTerm={filterCheckbox.staticSearchTerm}
+          />
+        ))}
+      </div>
 
       <JobsPagination totalPages={totalPages} page={page} setPage={setPage} />
       {loading && <h1>Loading...</h1>}

@@ -18,9 +18,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  
 }
-
 
 /* #searchButton {
   justify-self: center;
@@ -30,140 +28,137 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 50%;
- /* align-items: center; */
+  /* align-items: center; */
   /* margin: 0 auto; */
   grid-gap: 2rem;
 }
 
-
 /*NAV BAR STYLING*/
-a{
+a {
   color: rgb(255, 255, 255);
 }
 
-.nav{
+.nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 10px 3%;
-  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   /* padding: 50px; */
   backdrop-filter: blur(30px);
   border: solid yellow 1px;
   background-clip: padding-box;
   box-shadow: 3px 3px 3px rgba(94, 244, 149, 0.845);
-  line-height:1.5;
-
-
+  line-height: 1.5;
 }
 
-.logo{
+.logo {
   cursor: pointer;
   border: 2px solid rgb(245, 255, 255);
   padding: 30px;
   margin-right: auto;
 }
 
-.navLinks{
- list-style: none; 
+.navLinks {
+  list-style: none;
 }
 
-.navLinks li{
+.navLinks li {
   display: inline-block;
   padding: 0px 20px;
 }
 
-.navLinks li a{
+.navLinks li a {
   transition: all 0.3s ease 0s;
 }
 
-.navLinks li a:hover{
+.navLinks li a:hover {
   transition: all 0.3s ease 0s;
   color: rgb(255, 255, 255);
   box-shadow: 5px 5px rgb(29, 201, 244);
 }
 
-.contact{
+.contact {
   margin-left: 20px;
   padding: 9px 25px;
   border: none;
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease 0s;
-  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(30px);
   border: solid yellow 1px;
   background-clip: padding-box;
   box-shadow: 3px 3px 3px rgba(94, 244, 149, 0.845);
-  line-height:1.5;
+  line-height: 1.5;
   color: white;
   font-weight: bold;
-
 }
 
-button:hover{
+button:hover {
   background-color: rgba(239, 46, 249, 0.8);
   border: solid rgb(4, 254, 254) 1px;
 }
 
 /*Main Container*/
 
-.Container{
+.Container {
   border: solid 2px greenyellow;
   /* box-shadow: 15px 15px 15px rgba(111, 75, 240, 0.712); */
 }
 
 /*Main Search Bar*/
 
-.searchBox{
+.searchBox {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 8px;
   margin-bottom: 10px;
- 
 }
 
-#searchBtn{
+#searchBtn {
   border-radius: 30px;
   padding: 2px 45px;
- background-color: rgba(255,255,255,0.1);
- backdrop-filter: blur(30px);
- border: solid rgb(0, 0, 0) 1px;
- background-clip: padding-box;
- box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.845);
- line-height:1.5;
- color: white;
- font-weight: bold;
-
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  border: solid rgb(0, 0, 0) 1px;
+  background-clip: padding-box;
+  box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.845);
+  line-height: 1.5;
+  color: white;
+  font-weight: bold;
 }
 
 /* Return To Complete/Center And Space Evenly Properly */
-.optionsForm{
+.optionsForm {
   display: flex;
   justify-content: center;
   gap: 50px;
- 
 }
 
-footer{
-    /* display: flex;
+footer {
+  /* display: flex;
     justify-content: flex-end; */
-    /* align-items: center; */
-    padding: 10px 3%;
-    background-color: rgba(255,255,255,0.1);
-   
-    backdrop-filter: blur(30px);
-    border: solid yellow 1px;
-    background-clip: padding-box;
-    box-shadow: 3px -3px 3px rgba(94, 244, 149, 0.845);
-    line-height:1.5;
+  /* align-items: center; */
+  padding: 10px 3%;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  backdrop-filter: blur(30px);
+  border: solid yellow 1px;
+  background-clip: padding-box;
+  box-shadow: 3px -3px 3px rgba(94, 244, 149, 0.845);
+  line-height: 1.5;
 }
 
-/*Styling For Pagination, Not Functioning/*
+/* Styling For Pagination */
 
-/* .pagination{
-  border: radius 50%;
-  background-color: black;
-  color: red;
-} */
+.pagination {
+  justify-content: center;
+  border-radius: 50%;
+  padding-bottom: 20px;
+}
+.pageNum {
+  text-align: center;
+  margin-top: 20px;
+}

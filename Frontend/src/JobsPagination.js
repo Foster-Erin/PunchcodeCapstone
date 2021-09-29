@@ -26,8 +26,8 @@ export default function JobsPagination({ page, setPage, totalPages }) {
 
   return (
     <div>
-      <div>
-        page {page.toLocaleString('en-US')} of{' '}
+      <div className='pageNum'>
+        Page {page.toLocaleString('en-US')} of{' '}
         {totalPages.toLocaleString('en-US')}
       </div>
       <Pagination>
