@@ -10,8 +10,9 @@
 .bg-image {
   background-image: url(./Assets/gradient.jpg);
   background-size: cover;
-  background-position: right -20px bottom -10px;
+  background-position: center center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   /* background-color: aquamarine; */
 }
 

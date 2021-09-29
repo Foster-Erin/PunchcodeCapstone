@@ -61,7 +61,7 @@ function App() {
             </nav>
           </div>
         </div>
-        <h1 className=' headerTitle mb-4'></h1>
+        <h1 className='headerTitle'></h1>
       </header>
       <SearchForm params={params} onParamChange={handleParamChange} />
       <form
@@ -80,39 +80,42 @@ function App() {
         <div>
           <button type='submit'>SEARCH</button>
         </div>
-        <div>
-          <button
-            type='button'
+        <form>
+          <input
+          className="filterCheckBox"
+            type='checkbox'
             onClick={() => {
               setSearchInput('');
               setSearchValue('frontend');
             }}
-          >
-            Frontend
-          </button>
+          />
+            <span>Frontend</span>
+        
+        <div>
+          <input
+          className="filterCheckBox"
+          type='checkbox'
+          onClick={() => {
+            setSearchInput('');
+            setSearchValue('Backend');
+          }}
+          />
+            <span>Backend</span>
+    
         </div>
         <div>
-          <button
-            type='button'
-            onClick={() => {
-              setSearchInput('');
-              setSearchValue('Backend');
-            }}
-          >
-            Backend
-          </button>
-        </div>
-        <div>
-          <button
-            type='button'
-            onClick={() => {
-              setSearchInput('');
-              setSearchValue('UI | UX');
-            }}
-          >
+          <input
+          className="filterCheckBox"
+          type='checkbox'
+          onClick={() => {
+            setSearchInput('');
+            setSearchValue('UI | UX');
+          }}
+          />
             UI / UX
-          </button>
+          
         </div>
+          </form>
       </form>
 
       <JobsPagination totalPages={totalPages} page={page} setPage={setPage} />
