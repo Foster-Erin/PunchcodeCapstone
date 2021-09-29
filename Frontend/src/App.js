@@ -5,12 +5,9 @@ import JobsPagination from './JobsPagination';
 import SearchForm from './SearchForm';
 import FilterCheckbox from './FilterCheckbox';
 import Header from './Header';
-<<<<<<< Updated upstream
 import SearchBar from './SearchBar';
-=======
 import Footer from './Footer';
 import LoginForm from './LoginForm';
->>>>>>> Stashed changes
 import './App.css';
 
 function App() {
@@ -36,6 +33,7 @@ function App() {
   return (
     <main className='Container mb-4 bg-image'>
       <Header />
+      <LoginForm/>
       <div className='motto'>
         <h1>What's up Newbie?</h1>
         <p>
