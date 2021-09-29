@@ -5,6 +5,7 @@ import JobsPagination from './JobsPagination';
 import SearchForm from './SearchForm';
 import FilterCheckbox from './FilterCheckbox';
 import Header from './Header';
+import LoginForm from './LoginForm';
 import './App.css';
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
   return (
     <main className='Container mb-4 bg-image'>
       <Header />
+      <LoginForm/>
       <SearchForm params={params} onParamChange={handleParamChange} />
       <form
         onSubmit={(e) => {

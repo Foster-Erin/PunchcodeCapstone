@@ -7,8 +7,8 @@
 body{
     width: 100vw;
     height: 100vh;
-    padding: 10em 10em;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
+    
 }
 
 .glass{
@@ -19,7 +19,7 @@ body{
     backdrop-filter: blur(30px);
     border: solid transparent 2px;
     background-clip: padding-box;
-    box-shadow: 10px 10px 10px rgba(45,55,68,0.3);
+    box-shadow: 10px 10px 10px rgba(45, 55, 68, 0.461);
     line-height:1.5;
     align-items: center;
 
