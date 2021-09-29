@@ -53,7 +53,6 @@ a {
   align-items: center;
   padding: 10px 3%;
   background-color: rgba(255, 255, 255, 0.1);
-  /* padding: 50px; */
   backdrop-filter: blur(30px);
   border: solid yellow 1px;
   background-clip: padding-box;
@@ -109,12 +108,14 @@ button:hover {
   border: solid rgb(4, 254, 254) 1px;
 }
 
-/*Main Container*/
 
+<<<<<<< Updated upstream
 .Container {
   /* border: solid 2px greenyellow; */
   /* box-shadow: 15px 15px 15px rgba(111, 75, 240, 0.712); */
 }
+=======
+>>>>>>> Stashed changes
 
 /*Main Search Bar*/
 
@@ -178,4 +179,37 @@ footer {
 .pageNum {
   text-align: center;
   margin-top: 20px;
+}
+
+.frontend{
+  
+  color: white;
+}
+
+.front{
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#filterButtons:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: solid rgb(4, 254, 241) 1px;
+}
+
+.FilterCheckbox.frontend button {
+  border: rgb(231, 255, 19) 2px solid;
+  box-shadow: 3px 3px 3px rgba(29, 243, 115, 0.845);
+
+}
+
+.FilterCheckbox.backend button {
+  border: rgb(0, 105, 243) 2px solid;
+  box-shadow: 3px 3px 3px rgba(245, 241, 6, 0.845);
+}
+
+.FilterCheckbox.ux button {
+  border: rgb(62, 255, 55) 2px solid;
+  box-shadow: 3px 3px 3px rgba(0, 225, 255, 0.845);
 }

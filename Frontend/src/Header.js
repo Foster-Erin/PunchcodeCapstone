@@ -6,10 +6,9 @@ function Header() {
         <ul className='navLinks'>
           <li>HOME</li>
           <li>SIGN UP</li>
-          <li>LOGIN</li>
         </ul>
         <button type='button' className='contact'>
-          Contact
+          LOGIN
         </button>
       </nav>
     </header>

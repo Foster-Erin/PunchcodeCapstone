@@ -5,7 +5,12 @@ import JobsPagination from './JobsPagination';
 import SearchForm from './SearchForm';
 import FilterCheckbox from './FilterCheckbox';
 import Header from './Header';
+<<<<<<< Updated upstream
 import SearchBar from './SearchBar';
+=======
+import Footer from './Footer';
+import LoginForm from './LoginForm';
+>>>>>>> Stashed changes
 import './App.css';
 
 function App() {
@@ -59,11 +64,12 @@ function App() {
       <div>{[searchInput, ...filterCheckboxValues].join(' ')}</div>
       <div className='optionsForm'>
         {[
-          { label: 'Frontend', staticSearchTerm: 'frontend' },
-          { label: 'Backend', staticSearchTerm: 'backend' },
-          { label: 'UI/UX', staticSearchTerm: 'UI | UX' },
+          { label: 'Frontend', staticSearchTerm: 'frontend', classes:"frontend" },
+          { label: 'Backend', staticSearchTerm: 'backend', classes:"backend" },
+          { label: 'UI/UX', staticSearchTerm: 'UI | UX', classes:"ux" },
         ].map((filterCheckbox) => (
           <FilterCheckbox
+          classes={filterCheckbox?.classes}
             key={filterCheckbox.label}
             label={filterCheckbox.label}
             handleClick={() => {
@@ -95,7 +101,7 @@ function App() {
       </section>
 
       <JobsPagination totalPages={totalPages} page={page} setPage={setPage} />
-      <footer>Footer</footer>
+      <Footer/>
     </main>
   );
 }
