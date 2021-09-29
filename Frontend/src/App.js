@@ -5,6 +5,7 @@ import JobsPagination from './JobsPagination';
 import SearchForm from './SearchForm';
 import './App.css';
 
+
 function App() {
   const [params, setParams] = useState({});
   const [page, setPage] = useState(1);
@@ -33,21 +34,13 @@ function App() {
   return (
     <main className='Container mb-4 bg-image'>
       <header className='header'>
-        <div id='navContainer'>
-          <div class='navRow align-items-center justify-content-between'>
-            <div class='logo'>
-              <a href='#'>LOGO</a>
-            </div>
-            <input type='checkbox' id='navCheck' />
-            <label htmlFor='navCheck' className='navToggle'>
-              <span></span>
-            </label>
+        <image className="logo" src="./Assets/logo.png" alt="logo"></image>
+       
+         
+    
 
             <nav className='nav'>
-              <ul>
-                <li>
-                  <a href='#'></a>
-                </li>
+              <ul className="navLinks">
                 <li>
                   <a href='#'>HOME</a>
                 </li>
@@ -59,8 +52,8 @@ function App() {
                 </li>
               </ul>
             </nav>
-          </div>
-        </div>
+            <a class="cta" href="#"><button className="contact">Contact</button></a>
+          
         <h1 className='headerTitle'></h1>
       </header>
       <SearchForm params={params} onParamChange={handleParamChange} />

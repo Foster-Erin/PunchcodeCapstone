@@ -1,3 +1,4 @@
+
 :root{
   --color-1: #000000;
 }
@@ -66,13 +67,13 @@ header {
   padding: 12px;
 }
 
-a{
+/* a{
   text-decoration: none;
 }
 
 ul{
   list-style: none;
-}
+} */
 
 /* .navRow {
   display: flex;
@@ -87,19 +88,19 @@ ul{
   justify-content: space-between;
 }
 
-.header .nav ul li{
+/* .header .nav ul li{
   display: inline-block;
   margin-left: 40px;
-}
+} */
 
-.header .nav ul li a{
+/* .header .nav ul li a{
   display: inline-block;
   font-size:16px;
   padding: 10px 0;
   color: rgba(255,255,255,0.7);
   text-transform: uppercase;
   transition: all 0.5s ease;
-}
+} */
 
 .header .nav,
 .header .logo{

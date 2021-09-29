@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
 * {
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 :root {
@@ -24,16 +27,6 @@
   min-height: calc(100vh - 40vh);
 }
 
-header {
-  padding: 15px;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
-}
-
-header nav ul {
-  display: grid;
-}
 
 #searchButton {
   justify-self: center;
@@ -45,4 +38,57 @@ header nav ul {
   width: 80%;
   margin: 0 auto;
   grid-gap: 1rem;
+}
+
+/*NAV BAR STYLING*/
+a{
+  color: rgb(255, 238, 0);
+}
+
+header{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 10%;
+  background-color: black;
+
+}
+
+.logo{
+  cursor: pointer;
+  border: 2px solid rgb(40, 251, 255);
+  padding: 30px;
+  margin-right: auto;
+}
+
+.navLinks{
+ list-style: none; 
+}
+
+.navLinks li{
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.navLinks li a{
+  transition: all 0.3s ease 0s;
+}
+
+.navLinks li a:hover{
+  transition: all 0.3s ease 0s;
+  color: aquamarine;
+}
+
+.contact{
+  padding: 9px 25px;
+  background-color: rgb(29, 201, 244);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+
+}
+
+button:hover{
+  background-color: rgba(194, 128, 252, 0.8);
 }
