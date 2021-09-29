@@ -34,12 +34,12 @@ function App() {
   return (
     <main className='Container mb-4 bg-image'>
       <header className='header'>
-        <image className="logo" src="./Assets/logo.png" alt="logo"></image>
        
          
     
 
             <nav className='nav'>
+        <image className="logo" src="./Assets/logo.png" alt="logo"></image>
               <ul className="navLinks">
                 <li>
                   <a href='#'>HOME</a>
@@ -51,10 +51,9 @@ function App() {
                   <a href='#'>LOGIN</a>
                 </li>
               </ul>
-            </nav>
             <a class="cta" href="#"><button className="contact">Contact</button></a>
+            </nav>
           
-        <h1 className='headerTitle'></h1>
       </header>
       <SearchForm params={params} onParamChange={handleParamChange} />
       <form

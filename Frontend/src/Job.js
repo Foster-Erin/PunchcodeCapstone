@@ -9,7 +9,7 @@ export default function Job({ job }) {
         <div className="cardBody grid glass">
           <div className='align-items-center'>
             <div>
-              <div id="cardTitle">
+              <div className="cardTitle">
                 {job.title} -{' '}
                 <span className='font-weight-bold'>
                   {job.company.display_name}
@@ -39,7 +39,7 @@ export default function Job({ job }) {
           </div>
   
         
-            <div id="jobDescription" className="hide">{job.description}</div>
+            <div className="jobDescription">{job.description}</div>
             <a href={job.redirect_url} target='_blank' rel='noreferrer' className='apply'>
               <button id="applyButton">APPLY NOW</button>
             </a>

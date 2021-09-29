@@ -7,11 +7,12 @@
 body{
     width: 100vw;
     height: 100vh;
-    padding: 10em 10em;;
+    padding: 10em 10em;
+    background-color: black;
 }
 
 .glass{
-    width: 400px; 
+    width: 500px; 
     height: 600px;
     background-color: rgba(255,255,255,0.1);
     padding: 50px;
@@ -20,5 +21,6 @@ body{
     background-clip: padding-box;
     box-shadow: 10px 10px 10px rgba(45,55,68,0.3);
     line-height:1.5;
+    align-items: center;
 
 }

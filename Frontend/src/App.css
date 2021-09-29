@@ -18,47 +18,48 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  /* background-color: aquamarine; */
-}
-
-.Container {
-  display: flex;
-  flex-direction: column;
-  border: solid 2px black;
-  /* flex-wrap: wrap; */
-  min-height: calc(100vh - 40vh);
+  
 }
 
 
-#searchButton {
+/* #searchButton {
   justify-self: center;
-}
+} */
 
 .jobs-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 80%;
-  margin: 0 auto;
-  grid-gap: 1rem;
+  width: 50%;
+ /* align-items: center; */
+  /* margin: 0 auto; */
+  grid-gap: 2rem;
 }
+
 
 /*NAV BAR STYLING*/
 a{
-  color: rgb(255, 238, 0);
+  color: rgb(255, 255, 255);
 }
 
-header{
+.nav{
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 30px 10%;
-  background-color: black;
+  padding: 10px 3%;
+  background-color: rgba(255,255,255,0.1);
+  /* padding: 50px; */
+  backdrop-filter: blur(30px);
+  border: solid yellow 1px;
+  background-clip: padding-box;
+  box-shadow: 3px 3px 3px rgba(94, 244, 149, 0.845);
+  line-height:1.5;
+
 
 }
 
 .logo{
   cursor: pointer;
-  border: 2px solid rgb(40, 251, 255);
+  border: 2px solid rgb(245, 255, 255);
   padding: 30px;
   margin-right: auto;
 }
@@ -78,35 +79,63 @@ header{
 
 .navLinks li a:hover{
   transition: all 0.3s ease 0s;
-  color: aquamarine;
+  color: rgb(255, 255, 255);
+  box-shadow: 5px 5px rgb(29, 201, 244);
 }
 
 .contact{
   margin-left: 20px;
   padding: 9px 25px;
-  background-color: rgb(29, 201, 244);
   border: none;
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease 0s;
+  background-color: rgba(255,255,255,0.1);
+  backdrop-filter: blur(30px);
+  border: solid yellow 1px;
+  background-clip: padding-box;
+  box-shadow: 3px 3px 3px rgba(94, 244, 149, 0.845);
+  line-height:1.5;
+  color: white;
+  font-weight: bold;
 
 }
 
 button:hover{
-  background-color: rgba(194, 128, 252, 0.8);
+  background-color: rgba(239, 46, 249, 0.8);
+  border: solid rgb(4, 254, 254) 1px;
 }
+
+/*Main Container*/
+
+.Container{
+  border: solid 2px greenyellow;
+  /* box-shadow: 15px 15px 15px rgba(111, 75, 240, 0.712); */
+}
+
+/*Main Search Bar*/
 
 .searchBox{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 8px;
+  margin-bottom: 10px;
  
 }
 
 #searchBtn{
   border-radius: 30px;
   padding: 2px 45px;
- background-color: orange;
+ background-color: rgba(255,255,255,0.1);
+ backdrop-filter: blur(30px);
+ border: solid rgb(0, 0, 0) 1px;
+ background-clip: padding-box;
+ box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.845);
+ line-height:1.5;
+ color: white;
+ font-weight: bold;
+
 }
 
 /* Return To Complete/Center And Space Evenly Properly */
@@ -117,6 +146,19 @@ button:hover{
  
 }
 
+footer{
+    /* display: flex;
+    justify-content: flex-end; */
+    /* align-items: center; */
+    padding: 10px 3%;
+    background-color: rgba(255,255,255,0.1);
+   
+    backdrop-filter: blur(30px);
+    border: solid yellow 1px;
+    background-clip: padding-box;
+    box-shadow: 3px -3px 3px rgba(94, 244, 149, 0.845);
+    line-height:1.5;
+}
 
 /*Styling For Pagination, Not Functioning/*
 
