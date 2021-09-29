@@ -3,6 +3,9 @@ import React, { useState, useEffect } from 'react';
 import Job from './Job';
 import JobsPagination from './JobsPagination';
 import SearchForm from './SearchForm';
+import FilterCheckbox from './FilterCheckbox';
+import Header from './Header';
+import Searchbox from './Searchbox';
 import './App.css';
 
 function App() {
@@ -32,19 +35,7 @@ function App() {
 
   return (
     <main className='Container mb-4 bg-image'>
-      <header className='header'>
-        <nav className='nav'>
-          <image className='logo' src='./Assets/logo.png' alt='logo'></image>
-          <ul className='navLinks'>
-            <li>HOME</li>
-            <li>SIGN UP</li>
-            <li>LOGIN</li>
-          </ul>
-          <button type='button' className='contact'>
-            Contact
-          </button>
-        </nav>
-      </header>
+      <Header />
       <SearchForm params={params} onParamChange={handleParamChange} />
       <form
         onSubmit={(e) => {
@@ -52,55 +43,22 @@ function App() {
           setSearchValue(searchInput);
         }}
       >
-        <div className='searchBox'>
-          <input
-            onChange={(e) => setSearchInput(e.target.value)}
-            value={searchInput}
-            name='description'
-            type='text'
-            placeholder='Job, Location'
-          />
+        <Searchbox />
+        <div className='optionsForm'>
+          {[
+            { label: 'Frontend', staticSearchTerm: 'frontend' },
+            { label: 'Backend', staticSearchTerm: 'backend' },
+            { label: 'UI/UX', staticSearchTerm: 'UI | UX' },
+          ].map((filterCheckbox) => (
+            <FilterCheckbox
+              key={filterCheckbox.label}
+              setSearchInput={setSearchInput}
+              setSearchValue={setSearchValue}
+              label={filterCheckbox.label}
+              staticSearchTerm={filterCheckbox.staticSearchTerm}
+            />
+          ))}
         </div>
-        <div className='searchBox'>
-          <button id='searchBtn' type='submit'>
-            SEARCH
-          </button>
-        </div>
-        <form className='optionsForm'>
-          <div>
-            <input
-              className='filterCheckBox'
-              type='checkbox'
-              onClick={() => {
-                setSearchInput('');
-                setSearchValue('frontend');
-              }}
-            />
-            <span>Frontend</span>
-          </div>
-          <div>
-            <input
-              className='filterCheckBox'
-              type='checkbox'
-              onClick={() => {
-                setSearchInput('');
-                setSearchValue('Backend');
-              }}
-            />
-            <span>Backend</span>
-          </div>
-          <div>
-            <input
-              className='filterCheckBox'
-              type='checkbox'
-              onClick={() => {
-                setSearchInput('');
-                setSearchValue('UI | UX');
-              }}
-            />
-            UI / UX
-          </div>
-        </form>
       </form>
 
       <JobsPagination totalPages={totalPages} page={page} setPage={setPage} />
