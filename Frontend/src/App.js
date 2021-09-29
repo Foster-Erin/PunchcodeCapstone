@@ -5,6 +5,7 @@ import JobsPagination from './JobsPagination';
 import SearchForm from './SearchForm';
 import FilterCheckbox from './FilterCheckbox';
 import Header from './Header';
+import SearchBar from './SearchBar';
 import './App.css';
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
     page
   );
 
-  const [searchInput, setSearchInput] = useState('');
+  const [searchInput] = useState('');
   const [filterCheckboxValues, setFilterCheckboxValues] = useState([]);
 
   function handleParamChange(e) {
@@ -53,20 +54,7 @@ function App() {
           searchJobs(q.replace(/\s/g, '%20'));
         }}
       >
-        <div className='searchBox'>
-          <input
-            onChange={(e) => setSearchInput(e.target.value)}
-            value={searchInput}
-            name='description'
-            type='text'
-            placeholder='Job, Location'
-          />
-        </div>
-        <div className='searchButton'>
-          <button id='searchBtn' type='submit'>
-            SEARCH
-          </button>
-        </div>
+        <SearchBar />
       </form>
       <div>{[searchInput, ...filterCheckboxValues].join(' ')}</div>
       <div className='optionsForm'>
