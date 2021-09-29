@@ -11,6 +11,8 @@
 }
 
 .bg-image {
+  width: 100%;
+  height: 100%;
   background-image: url(./Assets/gradient.jpg);
   background-size: cover;
   background-position: center center;
@@ -80,6 +82,7 @@ header{
 }
 
 .contact{
+  margin-left: 20px;
   padding: 9px 25px;
   background-color: rgb(29, 201, 244);
   border: none;
@@ -92,3 +95,33 @@ header{
 button:hover{
   background-color: rgba(194, 128, 252, 0.8);
 }
+
+.searchBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+#searchBtn{
+  border-radius: 30px;
+  padding: 2px 45px;
+ background-color: orange;
+}
+
+/* Return To Complete/Center And Space Evenly Properly */
+.optionsForm{
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+ 
+}
+
+
+/*Styling For Pagination, Not Functioning/*
+
+/* .pagination{
+  border: radius 50%;
+  background-color: black;
+  color: red;
+} */

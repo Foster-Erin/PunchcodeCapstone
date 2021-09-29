@@ -1,15 +1,12 @@
 import React, { useState } from 'react';
-// import { Card, Badge, Button } from 'react-bootstrap';
 import './Job.css';
+import './Glass.css';
 
 export default function Job({ job }) {
-  // const [open, setOpen] = useState(false);
 
   return (
-    //import npm i react markdown to convert markdown to react code if necessary (after badges)//
-      // <div className="jobCardWrapper">
-      // <section className='card-container grid'>
-        <div className="cardBody grid">
+
+        <div className="cardBody grid glass">
           <div className='align-items-center'>
             <div>
               <div id="cardTitle">
@@ -48,7 +45,5 @@ export default function Job({ job }) {
             </a>
           
         </div>
-      // </section>
-      // </div>
   );
 }

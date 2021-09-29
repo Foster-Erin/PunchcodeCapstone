@@ -32,10 +32,12 @@ export default function JobsPagination({ page, setPage, totalPages }) {
       </div>
       <Pagination>
         <Pagination.First
+       
           onClick={() => clickHandler(1)}
           disabled={page === 1}
         />
         <Pagination.Prev
+        
           onClick={() => clickHandler(page - 1)}
           disabled={page === 1}
         />

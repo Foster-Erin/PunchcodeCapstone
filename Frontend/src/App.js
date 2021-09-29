@@ -63,17 +63,21 @@ function App() {
           setSearchValue(searchInput);
         }}
       >
+        <div className='searchBox'>
         <input
           onChange={(e) => setSearchInput(e.target.value)}
           value={searchInput}
           name='description'
           type='text'
-          id='jobSearchBar'
+          placeholder='Job, Location'
+          
         />
-        <div>
-          <button type='submit'>SEARCH</button>
         </div>
-        <form>
+        <div className="searchBox">
+          <button id="searchBtn" type='submit'>SEARCH</button>
+        </div>
+        <form className="optionsForm">
+          <div>
           <input
           className="filterCheckBox"
             type='checkbox'
@@ -83,7 +87,7 @@ function App() {
             }}
           />
             <span>Frontend</span>
-        
+            </div>
         <div>
           <input
           className="filterCheckBox"
