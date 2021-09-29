@@ -1,18 +1,10 @@
-function FilterCheckbox({
-  setSearchInput,
-  setSearchValue,
-  label = '',
-  staticSearchTerm = '',
-}) {
+function FilterCheckbox({ classes = '', handleClick, label = '' }) {
   return (
-    <div>
+    <div className={`FilterCheckbox ${classes}`}>
       <input
         className='filterCheckBox'
         type='checkbox'
-        onClick={() => {
-          setSearchInput('');
-          setSearchValue(staticSearchTerm);
-        }}
+        onChange={handleClick}
       />
       <span> {label}</span>
     </div>

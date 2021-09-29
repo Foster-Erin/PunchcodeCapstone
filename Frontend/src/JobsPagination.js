@@ -15,6 +15,7 @@ export default function JobsPagination({ page, setPage, totalPages }) {
   function clickHandler(linkPage) {
     if (page === linkPage) return;
     setPage(linkPage);
+    window.scrollTo(0, 0);
   }
   const pages = [
     Math.max(page - 2, 1),
@@ -50,11 +51,17 @@ export default function JobsPagination({ page, setPage, totalPages }) {
         ))}
 
         <Pagination.Next
-          onClick={(() => clickHandler(page + 1), window.scrollTo(0, 0))}
+          onClick={() => {
+            clickHandler(page + 1);
+            window.scrollTo(0, 0);
+          }}
           disabled={page === totalPages}
         />
         <Pagination.Last
-          onClick={() => clickHandler(totalPages)}
+          onClick={() => {
+            clickHandler(totalPages);
+            window.scrollTo(0, 0);
+          }}
           disabled={page === totalPages}
         />
       </Pagination>

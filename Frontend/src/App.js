@@ -5,7 +5,6 @@ import JobsPagination from './JobsPagination';
 import SearchForm from './SearchForm';
 import FilterCheckbox from './FilterCheckbox';
 import Header from './Header';
-import LoginForm from './LoginForm';
 import './App.css';
 
 function App() {
@@ -17,12 +16,7 @@ function App() {
   );
   const [searchValue, setSearchValue] = useState('');
   const [searchInput, setSearchInput] = useState('');
-
-  useEffect(() => {
-    if (typeof searchJobs === 'function') {
-      searchJobs(searchValue.replace(/\s/g, '%'));
-    }
-  }, [searchValue, searchJobs]);
+  const [filterCheckboxValues, setFilterCheckboxValues] = useState([]);
 
   function handleParamChange(e) {
     const param = e.target.name;
@@ -36,29 +30,30 @@ function App() {
   return (
     <main className='Container mb-4 bg-image'>
       <Header />
-      <LoginForm/>
       <SearchForm params={params} onParamChange={handleParamChange} />
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          setSearchValue(searchInput);
+          let q = [searchInput, ...filterCheckboxValues].join(' ');
+          searchJobs(q.replace(/\s/g, '%20'));
         }}
-      ></form>
-      <div className='searchBox'>
-        <input
-          onChange={(e) => setSearchInput(e.target.value)}
-          value={searchInput}
-          name='description'
-          type='text'
-          placeholder='Job, Location'
-        />
-      </div>
-      <div className='searchButton'>
-        <button id='searchBtn' type='submit'>
-          SEARCH
-        </button>
-      </div>
-
+      >
+        <div className='searchBox'>
+          <input
+            onChange={(e) => setSearchInput(e.target.value)}
+            value={searchInput}
+            name='description'
+            type='text'
+            placeholder='Job, Location'
+          />
+        </div>
+        <div className='searchButton'>
+          <button id='searchBtn' type='submit'>
+            SEARCH
+          </button>
+        </div>
+      </form>
+      {/* <div>{[searchInput, ...filterCheckboxValues].join(' ')}</div> */}
       <div className='optionsForm'>
         {[
           { label: 'Frontend', staticSearchTerm: 'frontend' },
@@ -67,10 +62,21 @@ function App() {
         ].map((filterCheckbox) => (
           <FilterCheckbox
             key={filterCheckbox.label}
-            setSearchInput={setSearchInput}
-            setSearchValue={setSearchValue}
             label={filterCheckbox.label}
-            staticSearchTerm={filterCheckbox.staticSearchTerm}
+            handleClick={() => {
+              if (
+                filterCheckboxValues.includes(filterCheckbox.staticSearchTerm)
+              ) {
+                setFilterCheckboxValues((prev) =>
+                  prev.filter((val) => val !== filterCheckbox.staticSearchTerm)
+                );
+              } else {
+                setFilterCheckboxValues([
+                  ...filterCheckboxValues,
+                  filterCheckbox.staticSearchTerm,
+                ]);
+              }
+            }}
           />
         ))}
       </div>
