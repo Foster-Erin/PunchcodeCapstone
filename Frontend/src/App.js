@@ -1,5 +1,5 @@
 import useFetchJobs from './useFetchJobs';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Job from './Job';
 import JobsPagination from './JobsPagination';
 import SearchForm from './SearchForm';
@@ -14,7 +14,7 @@ function App() {
     params,
     page
   );
-  const [searchValue, setSearchValue] = useState('');
+
   const [searchInput, setSearchInput] = useState('');
   const [filterCheckboxValues, setFilterCheckboxValues] = useState([]);
 
@@ -53,7 +53,7 @@ function App() {
           </button>
         </div>
       </form>
-      {/* <div>{[searchInput, ...filterCheckboxValues].join(' ')}</div> */}
+      <div>{[searchInput, ...filterCheckboxValues].join(' ')}</div>
       <div className='optionsForm'>
         {[
           { label: 'Frontend', staticSearchTerm: 'frontend' },
