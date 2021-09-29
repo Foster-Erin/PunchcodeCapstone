@@ -5,7 +5,6 @@ import JobsPagination from './JobsPagination';
 import SearchForm from './SearchForm';
 import FilterCheckbox from './FilterCheckbox';
 import Header from './Header';
-import Searchbox from './Searchbox';
 import './App.css';
 
 function App() {
@@ -43,7 +42,20 @@ function App() {
           setSearchValue(searchInput);
         }}
       >
-        <Searchbox />
+        <div className='searchBox'>
+          <input
+            onChange={(e) => setSearchInput(e.target.value)}
+            value={searchInput}
+            name='description'
+            type='text'
+            placeholder='Job, Location'
+          />
+        </div>
+        <div className='searchBox'>
+          <button id='searchBtn' type='submit'>
+            SEARCH
+          </button>
+        </div>
         <div className='optionsForm'>
           {[
             { label: 'Frontend', staticSearchTerm: 'frontend' },
