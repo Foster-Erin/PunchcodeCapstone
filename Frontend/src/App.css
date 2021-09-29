@@ -3,19 +3,19 @@
   box-sizing: border-box;
 }
 
-:root{
+:root {
   --color-1: #000000;
 }
 
-.bg-image{
+.bg-image {
   background-image: url(./Assets/gradient.jpg);
- background-size: cover;
- background-position: right -20px bottom -10px;
- background-repeat: no-repeat;
- /* background-color: aquamarine; */
+  background-size: cover;
+  background-position: right -20px bottom -10px;
+  background-repeat: no-repeat;
+  /* background-color: aquamarine; */
 }
 
-.Container{
+.Container {
   display: flex;
   flex-direction: column;
   border: solid 2px black;
@@ -23,22 +23,22 @@
   min-height: calc(100vh - 40vh);
 }
 
-header{
+header {
   padding: 15px;
   margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
 }
 
-header nav ul{
+header nav ul {
   display: grid;
 }
 
-#searchButton{
+#searchButton {
   justify-self: center;
 }
 
-.jobs-container{
+.jobs-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 80%;
