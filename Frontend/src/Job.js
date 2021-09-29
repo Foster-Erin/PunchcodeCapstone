@@ -17,9 +17,9 @@ export default function Job({ job }) {
             {job.category.label}{' '}
           </div>
 
-          <button variant='secondary' className='badge'>
+          <div variant='secondary' className='badge'>
             <span class='badge bg-dark'></span> {job.location.area}{' '}
-          </button>
+          </div>
           <div style={{ wordBreak: 'break-all' }}>{job.id.redirect_url}</div>
         </div>
       </div>

@@ -116,6 +116,13 @@ button:hover {
   margin-top: 8px;
   margin-bottom: 10px;
 }
+.searchButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
 
 #searchBtn {
   border-radius: 30px;
@@ -135,6 +142,7 @@ button:hover {
   display: flex;
   justify-content: center;
   gap: 50px;
+  margin-top: 20px;
 }
 
 footer {
