@@ -1,4 +1,8 @@
-function FilterCheckbox({ classes = '', handleClick, label = '' }) {
+function FilterCheckbox({
+  classes='',
+  handleClick,
+  label = '',
+}) {
   return (
     <div className={`FilterCheckbox ${classes}`}>
       <button

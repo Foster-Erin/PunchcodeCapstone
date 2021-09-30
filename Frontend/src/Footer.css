@@ -1,25 +1,18 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;    
-}
-
-.footerLinks{
+.navFooter{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
     color: white;
 }
 
 .footerLinks li{
     list-style: none;
     display: inline-block;
+    margin-left: 60px;
+
     
 }
 
-.footerLinks li + li{
-    margin-left: 65px;
-}
-
-.navFooter{
-  display: flex;
-  justify-content: flex-end;
- 
+.footer{
+    width: 100%; 
 }
