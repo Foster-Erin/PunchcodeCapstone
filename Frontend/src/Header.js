@@ -7,10 +7,10 @@ function Header() {
        
         <ul className='navLinks'>
           <li>
-            <Link to='/'>HOME</Link>
+            <Link className="navHomeLogin" to='/'>HOME</Link>
           </li>
           <li>
-            <Link to='/login'>LOGIN</Link>
+            <Link className="navHomeLogin" to='/login'>LOGIN</Link>
           </li>
         </ul>
         {/* <button type='button' className='contact'>

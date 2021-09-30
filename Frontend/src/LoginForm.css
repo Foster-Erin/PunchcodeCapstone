@@ -16,7 +16,7 @@
     backdrop-filter: blur(30px);
     border: solid transparent 2px;
     background-clip: padding-box;
-    box-shadow: 10px 10px 10px rgba(0, 110, 255, 0.733);
+    box-shadow: 7px 7px 7px rgba(0, 110, 255, 0.733);
     line-height:1.5;
     align-items: center;
     display: flex;
@@ -48,15 +48,16 @@
   align-items: center;
   border: black solid 1px;
   border-radius: 4px;
-  color: rgb(27, 240, 255);
+  /* color: rgb(27, 240, 255); */
   margin-top: 20px;
   background-color: rgba(255,255,255,0.1);
   backdrop-filter: blur(30px);
   border: solid rgb(0, 0, 0) 1px;
   background-clip: padding-box;
   box-shadow: 3px 3px 3px rgba(8, 226, 255, 0.845);
-  color: white;
+  color: rgb(0, 0, 0);
   font-weight: bold;
+  font-size: 15px;
 }
 
 .inputs{
