@@ -4,7 +4,7 @@ function Header() {
   return (
     <header className='header'>
       <nav className='nav'>
-        <img src='./Assets/logomouse2.png' alt='logo' />
+       
         <ul className='navLinks'>
           <li>
             <Link to='/'>HOME</Link>
@@ -13,9 +13,9 @@ function Header() {
             <Link to='/login'>LOGIN</Link>
           </li>
         </ul>
-        <button type='button' className='contact'>
+        {/* <button type='button' className='contact'>
           LOGIN
-        </button>
+        </button> */}
       </nav>
     </header>
   );
