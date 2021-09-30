@@ -7,7 +7,7 @@ import FilterCheckbox from './FilterCheckbox';
 import Header from './Header';
 import SearchBar from './SearchBar';
 import Footer from './Footer';
-import LoginForm from './LoginForm';
+// import LoginForm from './LoginForm';
 import './App.css';
 
 function App() {
@@ -33,20 +33,12 @@ function App() {
   return (
     <main className='Container mb-4 bg-image'>
       <Header />
-      <LoginForm/>
+      {/* <LoginForm/> */}
       <div className='motto'>
-        <h1>What's up Newbie?</h1>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
-        </p>
+        <h1>Finding Newbies Their First Developer Job</h1>
+        <h2 class='line-1 anim-typewriter'>
+          Jobs for Bootcamp Grads & Junior Level Programmers
+        </h2>
       </div>
 
       <SearchForm params={params} onParamChange={handleParamChange} />
@@ -62,12 +54,16 @@ function App() {
       <div>{[searchInput, ...filterCheckboxValues].join(' ')}</div>
       <div className='optionsForm'>
         {[
-          { label: 'Frontend', staticSearchTerm: 'frontend', classes:"frontend" },
-          { label: 'Backend', staticSearchTerm: 'backend', classes:"backend" },
-          { label: 'UI/UX', staticSearchTerm: 'UI | UX', classes:"ux" },
+          {
+            label: 'Frontend',
+            staticSearchTerm: 'frontend',
+            classes: 'frontend',
+          },
+          { label: 'Backend', staticSearchTerm: 'backend', classes: 'backend' },
+          { label: 'UI/UX', staticSearchTerm: 'UI | UX', classes: 'ux' },
         ].map((filterCheckbox) => (
           <FilterCheckbox
-          classes={filterCheckbox?.classes}
+            classes={filterCheckbox?.classes}
             key={filterCheckbox.label}
             label={filterCheckbox.label}
             handleClick={() => {
@@ -99,7 +95,7 @@ function App() {
       </section>
 
       <JobsPagination totalPages={totalPages} page={page} setPage={setPage} />
-      <Footer/>
+      <Footer />
     </main>
   );
 }

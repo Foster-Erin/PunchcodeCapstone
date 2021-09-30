@@ -2,7 +2,7 @@ function Header() {
   return (
     <header className='header'>
       <nav className='nav'>
-        <image className='logo' src='./Assets/logo.png' alt='logo'></image>
+        <img className='logo' src='./Assets/logomouse2.png' alt='logo' />
         <ul className='navLinks'>
           <li>HOME</li>
           <li>SIGN UP</li>
