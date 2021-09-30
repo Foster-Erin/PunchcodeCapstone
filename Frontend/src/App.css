@@ -29,7 +29,7 @@
   font-size: 3.5em;
   margin-bottom: 25px;
 }
-.line-1 {
+.typewriterTitle{
   position: relative;
   top: 50%;
   width: 25em;
@@ -42,7 +42,7 @@
   transform: translateY(-50%);
 }
 
-.anim-typewriter {
+.typewriterTitle {
   animation: typewriter 4s steps(44) 1s 1 normal both,
     blinkTextCursor 500ms steps(44) infinite normal;
 }
@@ -149,6 +149,15 @@ button:hover {
   margin-top: 100px;
   margin-bottom: 10px;
 }
+
+.searchBox input{
+  text-align: center;
+  padding: 10px 10px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px rgba(22, 22, 22, 0.845);
+  margin-right: 12px;
+}
 .searchButton {
   display: flex;
   justify-content: center;
@@ -158,16 +167,22 @@ button:hover {
 }
 
 #searchBtn {
-  border-radius: 30px;
-  padding: 2px 45px;
+  border-radius: 10px;
+ padding: 10px 10px;;
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(30px);
   border: solid rgb(0, 0, 0) 1px;
   background-clip: padding-box;
-  box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.845);
+  box-shadow: 3px 3px 3px rgba(22, 22, 22, 0.845);
   line-height: 1.5;
   color: white;
   font-weight: bold;
+}
+
+#searchBtn:hover {
+  transform: translateY(5px);
+  box-shadow: 2px 2px 26px 0px rgba(81, 255, 0, 0.993);
+  color: black;
 }
 
 /* Return To Complete/Center And Space Evenly Properly */
@@ -179,9 +194,6 @@ button:hover {
 }
 
 footer {
-  /* display: flex;
-    justify-content: flex-end; */
-  /* align-items: center; */
   padding: 10px 3%;
   background-color: rgba(255, 255, 255, 0.1);
 

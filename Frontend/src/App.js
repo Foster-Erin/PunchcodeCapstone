@@ -43,9 +43,9 @@ function App() {
           <Route exact path="/">
             <section className="wrapper">
           <div className='motto'>
-        <h1>Finding Newbies Their First Developer Job</h1>
-        <h2 class='line-1 anim-typewriter'>
-          Jobs for Bootcamp Grads & Junior Level Programmers
+        <h1 className="headerTitle">Jobs for Bootcamp Grads & Junior Level Programmers</h1>
+        <h2 className='typewriterTitle'>
+        Finding Newbies Their First Developer Job
         </h2>
       </div>
 
