@@ -205,7 +205,7 @@ footer {
 }
 
 .frontend {
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .front {
@@ -215,7 +215,7 @@ footer {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-#filterButtons:hover {
+/* #filterButtons:hover {
   background-color: rgba(0, 0, 0, 0.8);
   border: solid rgb(4, 254, 241) 1px;
 }
@@ -233,7 +233,7 @@ footer {
 .FilterCheckbox.ux button {
   border: rgb(62, 255, 55) 2px solid;
   box-shadow: 3px 3px 3px rgba(0, 225, 255, 0.845);
-}
+} */
 
 main {
   height: 100vh;

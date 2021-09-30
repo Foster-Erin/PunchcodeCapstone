@@ -20,7 +20,7 @@ function App() {
     page
   );
 
-  const [searchInput] = useState("");
+  const [searchInput, setSearchInput] = useState("");
   const [filterCheckboxValues, setFilterCheckboxValues] = useState([]);
 
   function handleParamChange(e) {
@@ -57,9 +57,9 @@ function App() {
                 searchJobs(q.replace(/\s/g, "%20"));
               }}
             >
-              <SearchBar />
+              <SearchBar setSearchInput={setSearchInput} searchInput={searchInput} />
             </form>
-            <div>{[searchInput, ...filterCheckboxValues].join(" ")}</div>
+           
             <div className="optionsForm">
               {[
                 {

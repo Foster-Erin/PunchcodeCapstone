@@ -5,7 +5,7 @@ function FilterCheckbox({
 }) {
   return (
     <div className={`FilterCheckbox ${classes}`}>
-      <button
+      <input
         id='filterButtons'
         className='front back ui active'
         type='checkbox'
