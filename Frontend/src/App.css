@@ -12,7 +12,7 @@
 
 .bg-image {
   width: 100%;
-  /* background-image: url(./Assets/gradient.jpg); */
+  background-image: url(./Assets/gradient.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -63,14 +63,14 @@
   }
 }
 
-/* .jobs-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 50%; */
-  /* align-items: center; */
-  /* margin: 0 auto; */
-  /* grid-gap: 2rem; */
-/* } */
+.jobs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  /* border: black solid 1px;
+  padding: 20px; */
+}
 
 /*NAV BAR STYLING*/
 a {
@@ -78,6 +78,7 @@ a {
 }
 
 .nav {
+  height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -188,7 +189,7 @@ footer {
   border: solid yellow 1px;
   background-clip: padding-box;
   box-shadow: 3px -3px 3px rgba(94, 244, 149, 0.845);
-  line-height: 1.5;
+  height: 80px;
 }
 
 /* Styling For Pagination */
@@ -236,10 +237,10 @@ footer {
 
 main {
   height: 100vh;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
 }
 
 header {
@@ -250,4 +251,8 @@ header {
 }
 header button {
   display: none;
+}
+
+.wrapper{
+  overflow-y: scroll;
 }
