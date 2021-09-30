@@ -1,12 +1,12 @@
 
-.loginContainer {
+/* .loginContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   height:100px;
 
-}
+} */
 
 .login {
     /* width: 500px; 
@@ -19,7 +19,15 @@
     box-shadow: 10px 10px 10px rgba(0, 110, 255, 0.733);
     line-height:1.5;
     align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height:33%;
+    width: 50%;
 }
+
+
 
 .required {
   color: rgb(0, 0, 0);
@@ -67,4 +75,11 @@
     color: white;
     font-weight: bold;
 
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }

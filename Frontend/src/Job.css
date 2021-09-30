@@ -1,5 +1,5 @@
 .cardTitle {
-  border: 2px solid black;
+  border: 1px solid black;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 20px;
@@ -11,16 +11,17 @@
     margin-top: -20px;
 }
 
-.cardBody {
+.cardBody.glass {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   place-content: center;
   border-radius: 2%;
+  border: black solid 1px;
 }
 .cardBody:hover {
   transform: translateY(5px);
-  box-shadow: 2px 2px 26px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 26px 0px rgba(0, 217, 255, 0.993);
 }
 
 .jobDescription {
@@ -35,10 +36,6 @@
   border-radius: 8px;
   width: 350px;
   height: 350px;
-
-  /* transition: transform .3s; */
-
-  grid-area: description;
 }
 
 #applyButton {
@@ -51,14 +48,17 @@
   backdrop-filter: blur(30px);
   border: solid transparent 2px;
   background-clip: padding-box;
-  box-shadow: 5px 5px 5px rgb(245, 242, 211);
+  box-shadow: 5px 5px 5px rgba(46, 44, 44, 0.473);
   line-height: 1.5;
   margin-top: -25px;
 }
 
 .badge {
-  background-color: black;
+    border: black solid .5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 5px 5px 5px rgba(46, 44, 44, 0.473);
   border-radius: 10px;
   padding: 6px;
   font-size: 12px;
+  color: black;
 }

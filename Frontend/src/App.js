@@ -41,6 +41,7 @@ function App() {
           <Route path="/login"> <LoginForm /></Route>
 
           <Route exact path="/">
+            <section className="wrapper">
           <div className='motto'>
         <h1>Finding Newbies Their First Developer Job</h1>
         <h2 class='line-1 anim-typewriter'>
@@ -118,6 +119,7 @@ function App() {
               page={page}
               setPage={setPage}
             />
+            </section>
           </Route>
         </Switch>
 
