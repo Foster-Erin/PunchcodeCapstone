@@ -90,7 +90,7 @@ a {
   line-height: 1.5;
 }
 
-.logo {
+.nav img {
   cursor: cell;
   margin-left: -25px;
   margin-right: auto;
@@ -100,7 +100,6 @@ a {
 
 .navLinks {
   list-style: none;
-
 }
 
 .navLinks li {
@@ -235,7 +234,7 @@ footer {
   box-shadow: 3px 3px 3px rgba(0, 225, 255, 0.845);
 }
 
-main{
+main {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -243,12 +242,11 @@ main{
   align-items: center;
 }
 
-header{
+header {
   width: 100%;
   justify-content: center;
   align-items: center;
-
 }
-header button{
+header button {
   display: none;
 }
