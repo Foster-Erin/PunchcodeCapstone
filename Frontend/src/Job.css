@@ -1,99 +1,64 @@
-/* .jobCardWrapper{
-    display: grid;
-    width: 800px;
-    border: solid 2px rgb(255, 255, 255);
-} */
-
-.grid{
-    display: grid;
-    /* grid-template-columns: 3fr 1fr; */
-    grid-template-rows: 2fr 1fr 4fr 1fr;
-    /* grid-gap: 30px; */
-    align-items: center;
-    grid-template-areas:
-    "title"
-    "category"
-    "description"
-    "apply";
-}
-
 .cardTitle {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 20px;
-    grid-area: title;
-}
-
-
-
-
-.cardBody{
-    /* border: rgb(0, 0, 0) solid 4px; */
-    border-radius:20px;
-    padding:30px;
-
-
-}
-.cardBody:hover{
-    transform: translateY(5px);
-    box-shadow: 2px 2px 26px 0px rgba(0,0,0,0.3);
-}
-
-
-
-.jobDescription{
-    background-color: rgba(255,255,255,0.1);
-    padding: 25px;
-    backdrop-filter: blur(30px);
-    border: solid transparent 2px;
-    background-clip: padding-box;
-    box-shadow: 10px 10px 10px rgba(45,55,68,0.3);
-    line-height:1.5;
-    border: none;
-    border-radius: 15px;
-    width: 350px;
-   
-    /* transition: transform .3s; */
-    
-    grid-area: description;
+  border: 2px solid black;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 30px;
 }
 
 .cardSubtitle{
-    grid-area: a;
+    margin-bottom: 25px;
+    margin-top: -20px;
 }
 
-
-#applyButton{
-    /* background-color: black; */
-    color: rgb(0, 8, 255);
-    border-radius: 10px;
-    grid-area: apply;
-    background-color: rgba(255,255,255,0.1);
-    padding: 2px 20px;
-    backdrop-filter: blur(30px);
-    border: solid transparent 2px;
-    background-clip: padding-box;
-    box-shadow: 10px 10px 10px rgb(250, 229, 0);
-    line-height:1.5;
-    
+.cardBody {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  place-content: center;
+  border-radius: 2%;
+}
+.cardBody:hover {
+  transform: translateY(5px);
+  box-shadow: 2px 2px 26px 0px rgba(0, 0, 0, 0.3);
 }
 
-.badge{
-    background-color: black;
+.jobDescription {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  backdrop-filter: blur(30px);
+  border: solid transparent 2px;
+  background-clip: padding-box;
+  box-shadow: 10px 10px 10px rgba(45, 55, 68, 0.3);
+  line-height: 1.5;
+  border: none;
+  border-radius: 8px;
+  width: 350px;
+  height: 350px;
+
+  /* transition: transform .3s; */
+
+  grid-area: description;
 }
 
-.apply{
-    display: block;
-    grid-area: b;
-  
-
+#applyButton {
+  background-color: black;
+  border: black solid 3px;
+  color: white;
+  border-radius: 10px;
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  padding: 10px 20px;
+  backdrop-filter: blur(30px);
+  border: solid transparent 2px;
+  background-clip: padding-box;
+  box-shadow: 5px 5px 5px rgb(245, 242, 211);
+  line-height: 1.5;
+  margin-top: -25px;
 }
 
-.show{
-
-}
-
-.hide{
-    height: 145px;
-
+.badge {
+  background-color: black;
+  border-radius: 10px;
+  padding: 6px;
+  font-size: 12px;
 }
