@@ -4,6 +4,7 @@ function Header() {
   return (
     <header className='header'>
       <nav className='nav'>
+        <h1 className="newbie">Newbie</h1>
        
         <ul className='navLinks'>
           <li>
