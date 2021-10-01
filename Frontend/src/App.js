@@ -72,7 +72,7 @@ function App() {
                   staticSearchTerm: "backend",
                   classes: "backend",
                 },
-                { label: "UI/UX", staticSearchTerm: "UI | UX", classes: "ux" },
+                { label: "UX/UI", staticSearchTerm: "UX | UI", classes: "ux" },
               ].map((filterCheckbox) => (
                 <FilterCheckbox
                   classes={filterCheckbox?.classes}

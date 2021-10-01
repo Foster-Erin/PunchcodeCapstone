@@ -12,7 +12,7 @@
 
 .bg-image {
   width: 100%;
-  background-image: url(./Assets/gradient.jpg);
+  /* background-image: url(./Assets/gradient.jpg); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -22,21 +22,26 @@
 }
 
 .motto {
-  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
 }
 
 .headerTitle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  font-family: "Architects Daughter", cursive;
+  margin-top: 10px;
+  margin: 0 auto;
+  /* font-family: 'Abril Fatface', cursive; */
+  font-family: "Gluten", cursive;
+  color: rgb(0, 0, 0);
 }
 
 .motto h1 {
   font-weight: bold;
-  font-size: 3.5em;
-  margin-bottom: 25px;
+  font-size: 3em;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .typewriterTitle {
@@ -49,6 +54,7 @@
   overflow: hidden;
   transform: translateY(-50%);
   margin-top: 60px;
+  font-family: "Gluten", cursive;
 }
 
 .typewriterTitle {
@@ -60,7 +66,7 @@
     width: 0;
   }
   to {
-    width: 20em;
+    width: 22em;
   }
 }
 @keyframes blinkTextCursor {
@@ -99,7 +105,7 @@
 .nav {
   height: 70px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   padding: 10px 3%;
   background-color: rgba(255, 255, 255, 0.1);
@@ -137,10 +143,7 @@
   box-shadow: 5px 5px rgb(26, 248, 37);
 }
 
-/* a:hover {
-  background-color: rgba(251, 168, 255, 0.8);
-  border: solid rgb(238, 240, 128) 1px;
-} */
+
 
 /*Main Search Bar*/
 
@@ -148,7 +151,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 5px;
   margin-bottom: 10px;
 }
 
@@ -191,8 +194,10 @@
 .optionsForm {
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: 28px;
   margin-top: 20px;
+  margin-bottom: 100px;
+  margin-right: 93px;
 }
 
 footer {
@@ -206,17 +211,32 @@ footer {
   height: 80px;
 }
 
+li{
+  color: black;
+}
+
+li:hover{
+  color: rgb(255, 0, 234);
+}
 /* Styling For Pagination */
 
 .pagination {
+  display: flex;
   justify-content: center;
   border-radius: 50%;
   padding-bottom: 20px;
+  color: black;
 }
 .pageNum {
   text-align: center;
   margin-top: 20px;
   font-size: 13px;
+}
+
+a.page-link {
+  color: black;
+  border-radius: 12px;
+  border-color: rgb(255, 0, 242);
 }
 
 .frontend {
