@@ -12,6 +12,7 @@
 
 .bg-image {
   width: 100%;
+  background-color: rgb(250, 255, 253);
   /* background-image: url(./Assets/gradient.jpg); */
   background-size: cover;
   background-position: center;
@@ -108,7 +109,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 3%;
-  background-color: rgba(255, 255, 255, 0.1);
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  background-image: url(./Assets/gradient.jpg);
+  background-size: cover;
+  background-position-y: -46%;
   backdrop-filter: blur(30px);
   border: solid yellow 1px;
   background-clip: padding-box;
@@ -209,6 +213,9 @@ footer {
   background-clip: padding-box;
   box-shadow: 3px -3px 3px rgba(94, 244, 149, 0.845);
   height: 80px;
+  background-image: url(./Assets/gradient.jpg);
+  background-size: cover;
+  background-position-y: -236%;
 }
 
 li{
@@ -295,4 +302,7 @@ header {
   font-size: 50px;
   display: flex;
   justify-content: flex-start;
+  color: white;
+  text-shadow: 2px 2px 10px black;
+
 }
